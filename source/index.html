@@ -8,14 +8,16 @@
 <header class="header">
   <a class="logo-link" href="#">
     <img class="logo-icon" src="#" alt="Логотип сайта">
-    <span class="logo-text">Cat energy</span>
+  </a>
+  <a class="logo-link" href="#">
+    <img class="logo-text" alt="Текст-логотип Cat energy." src="#">
   </a>
   <ul class="menu--adaptive menu">
     <li class="menu__item">Главная</li>
     <li class="menu__item">Каталог продукции</li>
     <li class="menu__item">Подбор программы</li>
   </ul>
-  <span class="header__burger"></span>
+  <button class="header__burger" type="button"></button>
 </header>
 <main class="main">
   <section class="promotion">
@@ -24,8 +26,8 @@
     <a class="promotion__program-link button" href="#">Подобрать программу</a>
   </section>
   <section class="options">
+    <h2 class="options__text-hidden">Опции выбора каталога.</h2>
     <div class="options__card">
-      <h2 class="options__text-hidden">Опции выбора каталога.</h2>
       <h3 class="options__title">Похудение</h3>
       <p class="options__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
         диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
@@ -39,7 +41,7 @@
   </section>
   <section class="features">
     <h2 class="features__title">Как это работает</h2>
-    <ul class="features__list">
+    <ol class="features__list">
       <li class="feature">
         <p class="feature__text">Функциональное питание содержит только полезные питательные вещества.</p>
       </li>
@@ -52,19 +54,19 @@
       <li class="feature">
         <p class="feature__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
       </li>
-    </ul>
+    </ol>
   </section>
   <section class="example">
     <h2 class="example__title">Живой пример</h2>
     <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
     <div class="example__container">
       <div class="example__result result">
-        <h3 class="result__title">5 КГ</h3>
-        <span class="result__text">снижение веса</span>
+        <strong class="result__text">5 КГ</strong>
+        <span class="result__prompt">снижение веса</span>
       </div>
       <div class="example__result result">
-        <h3 class="result__title">60 ДНЕЙ</h3>
-        <span class="result__text">затрачено времени</span>
+        <strong class="result__text">60 ДНЕЙ</strong>
+        <span class="result__prompt">затрачено времени</span>
       </div>
     </div>
     <span class="example__total-cash">Затраты на питание: 15 000 РУБ. </span>
@@ -85,7 +87,10 @@
   </section>
 </main>
 <footer class="footer">
-  <span class="logo-text">Cat energy</span>
+  <a class="logo-link" href="#">
+    <img class="logo-text" alt="Текст-логотип Cat energy." src="#">
+  </a>
+  <!--Оставил скрытый заголовок здесь потому-что социальные сети относятся только к нашему списку-->
   <h2 class="footer__text-hidden">Социальные сети.</h2>
   <ul class="social-list">
     <li class="social-list__item social-item">
@@ -102,6 +107,7 @@
     </li>
   </ul>
   <div class="html-academy">
+    <h2 class="html-academy__text-hidden">Сделано в HTML Academy.</h2>
     <span class="html-academy__logo-text">HTML Academy</span>
     <a class="html-academy__link" href="#"></a>
   </div>
