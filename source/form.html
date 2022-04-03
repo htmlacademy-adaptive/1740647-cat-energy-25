@@ -24,7 +24,7 @@
   <strong class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</strong>
   <form class="program-form" action="https://echo.htmlacademy.ru/" method="post">
     <fieldset class="base-params">
-      <h2 class="base-params__title-hidden">Базовые параметры.</h2>
+      <legend class="base-params__title-hidden">Базовые параметры.</legend>
       <label for="name">
         <span>Имя:*</span>
         <input id="name" type="text" value="БАРСИК" name="name" required>
@@ -39,7 +39,7 @@
       </label>
     </fieldset>
     <fieldset class="result-options">
-      <h2 class="result-options__title-hidden">Опция программы.</h2>
+      <legend class="result-options__title-hidden">Опция программы.</legend>
       <ul class="options-list">
         <li class="options-item">
           <label class="options-item__label" for="weight-loss">
@@ -62,7 +62,7 @@
       </ul>
     </fieldset>
     <fieldset class="contacts">
-      <h2 class="contacts__title">Контактные данные (владельца кота)</h2>
+      <legend class="contacts__title">Контактные данные (владельца кота)</legend>
       <label class="contacts-email" for="email">
         <span class="contacts-email__text">E-mail:*</span>
         <input class="contacts-email__input" id="email" type="email" name="email" required>
@@ -73,13 +73,13 @@
       </label>
     </fieldset>
     <fieldset class="comment">
-      <h2 class="comment__title">Комментарий</h2>
+      <legend class="comment__title">Комментарий</legend>
       <label>
         <textarea rows="5" cols="33" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
       </label>
     </fieldset>
     <fieldset class="addition">
-      <h2 class="addition__title">Дополнительно</h2>
+      <legend class="addition__title">Дополнительно</legend>
       <ul class="addition-list">
         <li class="addition-item">
           <label class="addition-item__label" for="sweetener">
@@ -123,27 +123,28 @@
   <a class="logo-link" href="#">
     <img class="logo-text" alt="Текст-логотип Cat energy." src="#">
   </a>
-  <!--Оставил скрытый заголовок здесь потому-что социальные сети относятся только к нашему списку-->
-  <h2 class="footer__text-hidden">Социальные сети.</h2>
-  <ul class="social-list">
-    <li class="social-list__item social-item">
-      <span class="social-item__text-hidden">Вконтакте.</span>
-      <a class="social-item__link" href="#"></a>
-    </li>
-    <li class="social-list__item social-item">
-      <span class="social-item__text-hidden">Ютуб.</span>
-      <a class="social-item__link" href="#"></a>
-    </li>
-    <li class="social-list__item social-item">
-      <span class="social-item__text-hidden">Телеграмм.</span>
-      <a class="social-item__link" href="#"></a>
-    </li>
-  </ul>
-  <div class="html-academy">
+  <section class="socials">
+    <h2 class="footer__text-hidden">Социальные сети.</h2>
+    <ul class="social-list">
+      <li class="social-list__item social-item">
+        <span class="social-item__text-hidden">Вконтакте.</span>
+        <a class="social-item__link" href="#"></a>
+      </li>
+      <li class="social-list__item social-item">
+        <span class="social-item__text-hidden">Ютуб.</span>
+        <a class="social-item__link" href="#"></a>
+      </li>
+      <li class="social-list__item social-item">
+        <span class="social-item__text-hidden">Телеграмм.</span>
+        <a class="social-item__link" href="#"></a>
+      </li>
+    </ul>
+  </section>
+  <section class="html-academy">
     <h2 class="html-academy__text-hidden">Сделано в HTML Academy.</h2>
     <span class="html-academy__logo-text">HTML Academy</span>
     <a class="html-academy__link" href="#"></a>
-  </div>
+  </section>
 </footer>
 </body>
 </html>
