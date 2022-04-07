@@ -1,13 +1,20 @@
-@base-font-color: #000;
-@alternate-font-color: #fff;
+@base-font-color: #000000;
+@alternate-font-color: #ffffff;
 @base-color: #68B738;
+@secondary-color: #F2F2F2;
 @base-font: "Oswald", sans-serif;
 @alternate-font: "Arial", sans-serif;
 
-.add-font (@size, @weight, @height) {
-  line-height: @height;
+.add-font-size-small () {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.add-font-size (@size, @weight, @height) {
   font-size: @size;
   font-weight: @weight;
+  line-height: @height;
 }
 
 .add-visually-hidden () {
@@ -19,4 +26,9 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.add-base-padding () {
+  padding-left: 20px;
+  padding-right: 20px;
 }
