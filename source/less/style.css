@@ -12,6 +12,10 @@
   src: url("../fonts/oswaldmedium.woff") format("woff"), url("../fonts/oswaldmedium.woff2") format("woff2");
   font-display: swap;
 }
+.footer__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .html-academy__text-hidden {
   position: absolute;
   width: 1px;
@@ -81,6 +85,10 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.header {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .menu {
   list-style-type: none;
 }
@@ -102,6 +110,7 @@
   color: #ffffff;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 }
 .example {
   background-color: #F2F2F2;
@@ -306,6 +315,10 @@
   color: #000000;
   text-transform: uppercase;
 }
+.form__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .form__title {
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -328,6 +341,15 @@
   line-height: 18px;
   color: #000000;
   text-transform: uppercase;
+}
+.options-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.program-form {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .program-form__button {
   font-size: 16px;
@@ -410,6 +432,8 @@
   overflow: hidden;
 }
 .catalog__title {
+  padding-left: 20px;
+  padding-right: 20px;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
@@ -432,6 +456,8 @@
 }
 .characteristics-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .promo {
   padding-left: 20px;

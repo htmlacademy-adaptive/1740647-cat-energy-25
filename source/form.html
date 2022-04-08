@@ -21,8 +21,10 @@
   <button class="header__burger" type="button"></button>
 </header>
 <main class="form">
-  <h1 class="form__title">Подбор программы</h1>
-  <strong class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</strong>
+  <div class="form__wrapper">
+    <h1 class="form__title">Подбор программы</h1>
+    <strong class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</strong>
+  </div>
   <form class="program-form" action="https://echo.htmlacademy.ru/" method="post">
     <fieldset class="base-params">
       <legend class="base-params__title-hidden">Базовые параметры.</legend>
@@ -123,31 +125,33 @@
       <img class="map__image" src="img/map.jpg" alt="Карта с расположение компании Cat energy">
     </div>
   </section>
-  <a class="logo-link" href="#">
-    <img class="logo-text" alt="Текст-логотип Cat energy." src="#">
-  </a>
-  <section class="socials">
-    <h2 class="socials__text-hidden">Социальные сети.</h2>
-    <ul class="social-list">
-      <li class="social-list__item social-item">
-        <span class="social-item__text-hidden">Вконтакте.</span>
-        <a class="social-item__link" href="#"></a>
-      </li>
-      <li class="social-list__item social-item">
-        <span class="social-item__text-hidden">Ютуб.</span>
-        <a class="social-item__link" href="#"></a>
-      </li>
-      <li class="social-list__item social-item">
-        <span class="social-item__text-hidden">Телеграмм.</span>
-        <a class="social-item__link" href="#"></a>
-      </li>
-    </ul>
-  </section>
-  <section class="html-academy">
-    <h2 class="html-academy__text-hidden">Сделано в HTML Academy.</h2>
-    <span class="html-academy__logo-text">HTML Academy</span>
-    <a class="html-academy__link" href="#"></a>
-  </section>
+  <div class="footer__wrapper">
+    <a class="logo-link" href="#">
+      <img class="logo-text" alt="Текст-логотип Cat energy." src="#">
+    </a>
+    <section class="socials">
+      <h2 class="socials__text-hidden">Социальные сети.</h2>
+      <ul class="social-list">
+        <li class="social-list__item social-item">
+          <span class="social-item__text-hidden">Вконтакте.</span>
+          <a class="social-item__link" href="#"></a>
+        </li>
+        <li class="social-list__item social-item">
+          <span class="social-item__text-hidden">Ютуб.</span>
+          <a class="social-item__link" href="#"></a>
+        </li>
+        <li class="social-list__item social-item">
+          <span class="social-item__text-hidden">Телеграмм.</span>
+          <a class="social-item__link" href="#"></a>
+        </li>
+      </ul>
+    </section>
+    <section class="html-academy">
+      <h2 class="html-academy__text-hidden">Сделано в HTML Academy.</h2>
+      <span class="html-academy__logo-text">HTML Academy</span>
+      <a class="html-academy__link" href="#"></a>
+    </section>
+  </div>
 </footer>
 </body>
 </html>
