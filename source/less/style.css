@@ -461,6 +461,10 @@
   line-height: 20px;
   color: #ffffff;
 }
+.show-more {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .show-more__title {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
