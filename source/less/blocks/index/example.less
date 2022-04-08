@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.example {
+  background-color: @secondary-color;
+  .add-base-padding;
+}
+
+.example__title {
+  font-family: @base-font;
+  .add-font-size(36px, 400, 40px);
+}
+
+.example__description {
+  font-family: @alternate-font;
+  .add-font-size-small;
+}
+
+.example__total-cash {
+  font-family: @base-font;
+  .add-font-size(14px, 400, 20px);
+  color: @base-font-color;
+  text-transform: uppercase;
+}

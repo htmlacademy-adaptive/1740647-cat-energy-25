@@ -1,0 +1,34 @@
+@import "../../variables";
+
+.options {
+  .add-base-padding;
+}
+
+.options__text-hidden {
+  .add-visually-hidden;
+}
+
+.options__card {
+  background-color: @secondary-color;
+}
+
+.options__title {
+  font-family: @base-font;
+  .add-font-size(24px, 400, 37px);
+  color: @base-font-color;
+  text-transform: uppercase;
+}
+
+.options__description {
+  font-family: @alternate-font;
+  .add-font-size-small;
+  color: @base-font-color;
+}
+
+.options__link {
+  font-family: @base-font;
+  .add-font-size(16px, 400, 16px);
+  text-decoration: none;
+  color: @base-font-color;
+  text-transform: uppercase;
+}

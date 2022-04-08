@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="form-body">
 <header class="header">
   <a class="logo-link" href="#">
     <img class="logo-icon" src="#" alt="Логотип сайта">
@@ -13,29 +14,31 @@
     <img class="logo-text" alt="Текст-логотип Cat energy." src="#">
   </a>
   <ul class="menu--adaptive menu">
-    <li class="menu__item">Главная</li>
-    <li class="menu__item">Каталог продукции</li>
-    <li class="menu__item">Подбор программы</li>
+    <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+    <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог продукции</a></li>
+    <li class="menu__item"><a class="menu__link" aria-current="page">Подбор программы</a></li>
   </ul>
   <button class="header__burger" type="button"></button>
 </header>
 <main class="form">
-  <h1 class="form__title">Подбор программы</h1>
-  <strong class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</strong>
+  <div class="form__wrapper">
+    <h1 class="form__title">Подбор программы</h1>
+    <strong class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</strong>
+  </div>
   <form class="program-form" action="https://echo.htmlacademy.ru/" method="post">
     <fieldset class="base-params">
       <legend class="base-params__title-hidden">Базовые параметры.</legend>
-      <label for="name">
-        <span>Имя:*</span>
-        <input id="name" type="text" value="БАРСИК" name="name" required>
+      <label class="base-params__label" for="name">
+        <span class="base-params__text">Имя:*</span>
+        <input class="base-params__input" id="name" type="text" value="БАРСИК" name="name" required>
       </label>
-      <label for="weight">
-        <span>Вес(кг):*</span>
-        <input id="weight" type="number" value="7" min="0" name="weight" required>
+      <label class="base-params__label" for="weight">
+        <span class="base-params__text">Вес(кг):*</span>
+        <input class="base-params__input" id="weight" type="number" value="7" min="0" name="weight" required>
       </label>
-      <label for="age">
-        <span>Возраст(лет):</span>
-        <input id="age" type="number" value="7" min="0" name="age">
+      <label class="base-params__label" for="age">
+        <span class="base-params__text">Возраст(лет):</span>
+        <input class="base-params__input" id="age" type="number" value="7" min="0" name="age">
       </label>
     </fieldset>
     <fieldset class="result-options">
@@ -74,8 +77,8 @@
     </fieldset>
     <fieldset class="comment">
       <legend class="comment__title">Комментарий</legend>
-      <label>
-        <textarea rows="5" cols="33" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+      <label class="comment__label">
+        <textarea class="comment__text-area" rows="5" cols="33" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
       </label>
     </fieldset>
     <fieldset class="addition">
@@ -107,44 +110,48 @@
         </li>
       </ul>
     </fieldset>
-    <button type="submit">отправить заявку</button>
+    <button class="program-form__button button" type="submit">отправить заявку</button>
     <strong class="program-form__required-text">*-Обязательные поля</strong>
   </form>
 </main>
 <footer class="footer">
   <section class="invite">
     <h2 class="invite__text-hidden">Контактные данные для сотрудничества.</h2>
-    <p class="invite__text">приглашаем к сотрудничеству дилеров!</p>
-    <address class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+    <div class="invite__wrapper">
+      <p class="invite__text">приглашаем к сотрудничеству дилеров!</p>
+      <address class="invite__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+    </div>
     <div class="invite__map map">
-      <img class="map__image" src="#" alt="Карта с расположение компании Cat energy">
+      <img class="map__image" src="img/map.jpg" alt="Карта с расположение компании Cat energy">
     </div>
   </section>
-  <a class="logo-link" href="#">
-    <img class="logo-text" alt="Текст-логотип Cat energy." src="#">
-  </a>
-  <section class="socials">
-    <h2 class="footer__text-hidden">Социальные сети.</h2>
-    <ul class="social-list">
-      <li class="social-list__item social-item">
-        <span class="social-item__text-hidden">Вконтакте.</span>
-        <a class="social-item__link" href="#"></a>
-      </li>
-      <li class="social-list__item social-item">
-        <span class="social-item__text-hidden">Ютуб.</span>
-        <a class="social-item__link" href="#"></a>
-      </li>
-      <li class="social-list__item social-item">
-        <span class="social-item__text-hidden">Телеграмм.</span>
-        <a class="social-item__link" href="#"></a>
-      </li>
-    </ul>
-  </section>
-  <section class="html-academy">
-    <h2 class="html-academy__text-hidden">Сделано в HTML Academy.</h2>
-    <span class="html-academy__logo-text">HTML Academy</span>
-    <a class="html-academy__link" href="#"></a>
-  </section>
+  <div class="footer__wrapper">
+    <a class="logo-link" href="#">
+      <img class="logo-text" alt="Текст-логотип Cat energy." src="#">
+    </a>
+    <section class="socials">
+      <h2 class="socials__text-hidden">Социальные сети.</h2>
+      <ul class="social-list">
+        <li class="social-list__item social-item">
+          <span class="social-item__text-hidden">Вконтакте.</span>
+          <a class="social-item__link" href="#"></a>
+        </li>
+        <li class="social-list__item social-item">
+          <span class="social-item__text-hidden">Ютуб.</span>
+          <a class="social-item__link" href="#"></a>
+        </li>
+        <li class="social-list__item social-item">
+          <span class="social-item__text-hidden">Телеграмм.</span>
+          <a class="social-item__link" href="#"></a>
+        </li>
+      </ul>
+    </section>
+    <section class="html-academy">
+      <h2 class="html-academy__text-hidden">Сделано в HTML Academy.</h2>
+      <span class="html-academy__logo-text">HTML Academy</span>
+      <a class="html-academy__link" href="#"></a>
+    </section>
+  </div>
 </footer>
 </body>
 </html>
