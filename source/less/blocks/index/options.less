@@ -2,6 +2,17 @@
 
 .options {
   .add-base-padding;
+  display: grid;
+  grid-gap: 20px;
+
+  @media (min-width: @medium-width) {
+    grid-gap: 30px;
+  }
+
+  @media (min-width: @large-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
 }
 
 .options__text-hidden {

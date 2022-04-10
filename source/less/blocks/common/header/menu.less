@@ -2,6 +2,15 @@
 
 .menu {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-column: ~"1 / -1";
+
+  @media (min-width: @medium-width) {
+    grid-column: ~"3 / -1";
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .menu__link {
@@ -10,4 +19,17 @@
   color: @base-font-color;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.menu__item {
+  display: flex;
+  justify-content: center;
+}
+
+.menu--closed {
+  display: none;
+
+  @media (min-width: @medium-width) {
+    display: flex;
+  }
 }

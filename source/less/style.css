@@ -16,6 +16,12 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+@media (min-width: 768px) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .html-academy__text-hidden {
   position: absolute;
   width: 1px;
@@ -46,6 +52,7 @@
 .invite__wrapper {
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
 }
 .invite__text {
   font-family: "Oswald", sans-serif;
@@ -61,6 +68,25 @@
   font-weight: 400;
   line-height: 20px;
   color: #000000;
+}
+.map {
+  background-image: url("../../../../img/map.jpg");
+  background-size: 320px auto;
+  background-repeat: no-repeat;
+  height: 362px;
+}
+@media (min-width: 768px) {
+  .map {
+    background-image: url("../../../../img/medium-map.jpg");
+    background-size: 768px auto;
+    height: 400px;
+  }
+}
+@media (min-width: 1440px) {
+  .map {
+    background-image: url("../../../../img/large-map.jpg");
+    background-size: 1440px auto;
+  }
 }
 .social-item__text-hidden {
   position: absolute;
@@ -88,9 +114,36 @@
 .header {
   padding-left: 20px;
   padding-right: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (min-width: 768px) {
+  .header {
+    grid-template-columns: 10% 20% 70%;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    grid-template-columns: 10% 40% 50%;
+  }
+}
+@media (min-width: 768px) {
+  .header__burger {
+    display: none;
+  }
 }
 .menu {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-column: 1 / -1;
+}
+@media (min-width: 768px) {
+  .menu {
+    grid-column: 3 / -1;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .menu__link {
   font-family: "Oswald", sans-serif;
@@ -100,6 +153,18 @@
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
+}
+.menu__item {
+  display: flex;
+  justify-content: center;
+}
+.menu--closed {
+  display: none;
+}
+@media (min-width: 768px) {
+  .menu--closed {
+    display: flex;
+  }
 }
 .button {
   background-color: #68B738;
@@ -117,17 +182,43 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+@media (min-width: 768px) {
+  .example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .example__title {
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
+  grid-column: 1 / -1;
+}
+@media (min-width: 1440px) {
+  .example__title {
+    grid-column: 1 / 2;
+  }
 }
 .example__description {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+  grid-column: 1 / -1;
+}
+@media (min-width: 1440px) {
+  .example__description {
+    grid-column: 1 / 2;
+  }
+}
+.example__container {
+  display: flex;
+}
+@media (min-width: 1440px) {
+  .example__container {
+    grid-column: 1 / 2;
+  }
 }
 .example__total-cash {
   font-family: "Oswald", sans-serif;
@@ -136,6 +227,16 @@
   line-height: 20px;
   color: #000000;
   text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+  .example__total-cash {
+    grid-column: 1 / 2;
+  }
+}
+@media (min-width: 1440px) {
+  .example__slider {
+    grid-column: 2 / -1;
+  }
 }
 .feature__text {
   font-family: "Arial", sans-serif;
@@ -160,9 +261,37 @@
   padding: 0;
   list-style-type: none;
 }
+@media (min-width: 768px) {
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1440px) {
+  .features__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.main-body {
+  min-height: 100%;
+  margin: 0;
+}
 .options {
   padding-left: 20px;
   padding-right: 20px;
+  display: grid;
+  grid-gap: 20px;
+}
+@media (min-width: 768px) {
+  .options {
+    grid-gap: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .options {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+  }
 }
 .options__text-hidden {
   position: absolute;
@@ -206,16 +335,34 @@
   background-image: url("../../../img/mobile-background-cat.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  min-height: 600px;
   padding-left: 20px;
   padding-right: 20px;
+  /* Заметил что фон на десктопе заходит на меню, пока не стал с этим заморачиваться. Думаю придется контейнер отдельно делать и позиционаровать абсолютно чтобы фон занести на меню*/
+}
+@media (min-width: 768px) {
+  .promotion {
+    background-image: none;
+  }
+}
+@media (min-width: 1440px) {
+  .promotion {
+    background-image: url("../../../img/desktop-background-cat.jpg");
+    background-position: right;
+    background-size: 50% auto;
+  }
 }
 .promotion__title {
+  margin-top: 0;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
   color: #ffffff;
+}
+@media (min-width: 768px) {
+  .promotion__title {
+    color: #000000;
+  }
 }
 .promotion__text {
   font-family: "Oswald", sans-serif;
@@ -225,8 +372,17 @@
   color: #ffffff;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .promotion__text {
+    color: #000000;
+  }
+}
 .promotion__program-link {
   text-decoration: none;
+}
+.result {
+  display: flex;
+  flex-direction: column;
 }
 .result__text {
   font-family: "Oswald", sans-serif;
