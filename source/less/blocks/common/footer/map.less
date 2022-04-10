@@ -1,0 +1,17 @@
+@import "../../../variables";
+
+.map {
+  background-image: url("../../../../img/map.jpg");
+  background-size: 320px auto;
+  background-repeat: no-repeat;
+  height: 362px;
+  @media (min-width: @medium-width) {
+    background-image: url("../../../../img/medium-map.jpg");
+    background-size: 768px auto;
+    height: 400px;
+  }
+  @media (min-width: @large-width) {
+    background-image: url("../../../../img/large-map.jpg");
+    background-size: 1440px auto;
+  }
+}
