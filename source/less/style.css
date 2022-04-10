@@ -156,17 +156,43 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+@media (min-width: 768px) {
+  .example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .example__title {
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
+  grid-column: 1 / -1;
+}
+@media (min-width: 1440px) {
+  .example__title {
+    grid-column: 1 / 2;
+  }
 }
 .example__description {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
+  grid-column: 1 / -1;
+}
+@media (min-width: 1440px) {
+  .example__description {
+    grid-column: 1 / 2;
+  }
+}
+.example__container {
+  display: flex;
+}
+@media (min-width: 1440px) {
+  .example__container {
+    grid-column: 1 / 2;
+  }
 }
 .example__total-cash {
   font-family: "Oswald", sans-serif;
@@ -175,6 +201,16 @@
   line-height: 20px;
   color: #000000;
   text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+  .example__total-cash {
+    grid-column: 1 / 2;
+  }
+}
+@media (min-width: 1440px) {
+  .example__slider {
+    grid-column: 2 / -1;
+  }
 }
 .feature__text {
   font-family: "Arial", sans-serif;
@@ -316,6 +352,10 @@
 }
 .promotion__program-link {
   text-decoration: none;
+}
+.result {
+  display: flex;
+  flex-direction: column;
 }
 .result__text {
   font-family: "Oswald", sans-serif;
