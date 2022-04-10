@@ -3,6 +3,7 @@
 .example {
   background-color: @secondary-color;
   .add-base-padding;
+
   @media (min-width: @medium-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -13,6 +14,7 @@
   font-family: @base-font;
   .add-font-size(36px, 400, 40px);
   grid-column: ~"1 / -1";
+
   @media (min-width: @large-width) {
     grid-column: ~"1 / 2";
   }
@@ -22,6 +24,7 @@
   font-family: @alternate-font;
   .add-font-size-small;
   grid-column: ~"1 / -1";
+
   @media (min-width: @large-width) {
     grid-column: ~"1 / 2";
   }
@@ -29,6 +32,7 @@
 
 .example__container {
   display: flex;
+
   @media (min-width: @large-width) {
     grid-column: ~"1 / 2";
   }
@@ -39,6 +43,7 @@
   .add-font-size(14px, 400, 20px);
   color: @base-font-color;
   text-transform: uppercase;
+
   @media (min-width: @large-width) {
     grid-column: ~"1 / 2";
   }
