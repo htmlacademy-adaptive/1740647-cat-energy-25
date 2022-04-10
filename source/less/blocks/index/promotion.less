@@ -6,12 +6,24 @@
   background-size: 100% auto;
   background-repeat: no-repeat;
   .add-base-padding;
+  @media (min-width: @medium-width) {
+    background-image: none;
+  }
+  @media (min-width: @large-width) {
+    background-image: url("../../../img/desktop-background-cat.jpg");
+    background-position: right;
+    background-size: 50% auto;
+  }
 }
 
 .promotion__title {
+  margin-top: 0;
   font-family: @base-font;
   .add-font-size(36px, 400, 36px);
   color: @alternate-font-color;
+  @media (min-width: @medium-width) {
+    color: @base-font-color;
+  }
 }
 
 .promotion__text {
@@ -19,6 +31,9 @@
   .add-font-size(14px, 400, 14px);
   color: @alternate-font-color;
   text-transform: uppercase;
+  @media (min-width: @medium-width) {
+    color: @base-font-color;
+  }
 }
 
 .promotion__program-link {
