@@ -1,5 +1,22 @@
 @import "../../variables";
 
+.base-products {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+
+  @media (min-width: @medium-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+  }
+
+  @media (min-width: @large-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 80px;
+    grid-column: ~"1 / -1";
+  }
+}
+
 .base-products__title-hidden {
   .add-visually-hidden;
 }
