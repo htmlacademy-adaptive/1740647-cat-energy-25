@@ -1,8 +1,19 @@
 @import "../../variables";
 
+.catalog {
+  @media (min-width: @large-width) {
+    display: grid;
+    grid-template-columns: 78% 22%;
+  }
+}
+
 .catalog__title {
   .add-base-padding;
   font-family: @base-font;
   .add-font-size(36px, 400, 36px);
   color: @base-font-color;
+
+  @media (min-width: @large-width) {
+    grid-column: ~"1 / -1";
+  }
 }
