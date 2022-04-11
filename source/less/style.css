@@ -408,12 +408,33 @@
   color: #000000;
   text-transform: uppercase;
 }
+@media (min-width: 1440px) {
+  .addition {
+    grid-column: 1 / -1;
+  }
+}
 .addition__title {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
   color: #000000;
+}
+.addition-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .addition-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1440px) {
+  .addition-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 .addition-item__text {
   font-family: "Oswald", sans-serif;
@@ -422,6 +443,10 @@
   line-height: 18px;
   color: #000000;
   text-transform: uppercase;
+}
+.base-params {
+  display: flex;
+  flex-direction: column;
 }
 .base-params__title-hidden {
   position: absolute;
@@ -441,12 +466,27 @@
   color: #000000;
   text-transform: uppercase;
 }
+@media (min-width: 1440px) {
+  .comment {
+    grid-column: 1 / -1;
+  }
+}
 .comment__title {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
   color: #000000;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1440px) {
+  .contacts {
+    flex-direction: row;
+    grid-column: 1 / -1;
+  }
 }
 .contacts__title {
   font-family: "Oswald", sans-serif;
@@ -506,6 +546,12 @@
 .program-form {
   padding-left: 20px;
   padding-right: 20px;
+}
+@media (min-width: 1440px) {
+  .program-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .program-form__button {
   font-size: 16px;

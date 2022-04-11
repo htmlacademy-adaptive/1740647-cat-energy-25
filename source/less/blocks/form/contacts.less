@@ -1,5 +1,14 @@
 @import "../../variables";
 
+.contacts {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: @large-width) {
+    flex-direction: row;
+    grid-column: ~"1 / -1";
+  }
+}
+
 .contacts__title {
   font-family: @base-font;
   .add-font-size(24px, 400, 26px);

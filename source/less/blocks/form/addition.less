@@ -1,7 +1,28 @@
 @import "../../variables";
 
+.addition {
+  @media (min-width: @large-width) {
+    grid-column: ~"1 / -1";
+  }
+}
+
 .addition__title {
   font-family: @base-font;
   .add-font-size(24px, 400, 26px);
   color: @base-font-color;
+}
+
+.addition-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @medium-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @large-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
