@@ -430,6 +430,7 @@
   background-image: url("../../../img/mobile-background-cat.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding-top: 27px;
   padding-left: 20px;
   padding-right: 20px;
   /* Заметил что фон на десктопе заходит на меню, пока не стал с этим заморачиваться. Думаю придется контейнер отдельно делать и позиционаровать абсолютно чтобы фон занести на меню*/
@@ -441,14 +442,22 @@
 }
 @media (min-width: 1440px) {
   .promotion {
+    padding-bottom: 185px;
     background-image: url("../../../img/desktop-background-cat.jpg");
     background-position: right;
     background-size: 50% auto;
   }
 }
+.promotion--desktop-position {
+  margin-top: -76px;
+  padding-top: 223px;
+  margin-bottom: 82px;
+}
 .promotion__title {
   margin-top: 0;
+  margin-bottom: 25px;
   font-family: "Oswald", sans-serif;
+  text-align: center;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
@@ -456,11 +465,18 @@
 }
 @media (min-width: 768px) {
   .promotion__title {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
     color: #000000;
+    text-align: left;
+    margin-bottom: 41px;
   }
 }
 .promotion__text {
   font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-bottom: 302px;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
@@ -469,11 +485,29 @@
 }
 @media (min-width: 768px) {
   .promotion__text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
     color: #000000;
+    text-align: left;
+    margin-bottom: 49px;
   }
 }
 .promotion__program-link {
+  display: block;
+  box-sizing: border-box;
   text-decoration: none;
+  text-align: center;
+  padding: 10px 44px;
+}
+@media (min-width: 768px) {
+  .promotion__program-link {
+    width: 244px;
+    padding: 14px 26px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+  }
 }
 .result {
   display: flex;
