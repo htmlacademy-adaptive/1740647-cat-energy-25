@@ -1,21 +1,78 @@
 @import "../../../variables";
 
 .header {
-  .add-base-padding;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
   @media (min-width: @medium-width) {
-    grid-template-columns: 10% 20% 70%;
+    grid-template-columns: 20% 80%;
   }
 
   @media (min-width: @large-width) {
-    grid-template-columns: 10% 40% 50%;
+    grid-template-columns: 20% 80%;
   }
 }
 
 .header__burger {
+  margin: 0;
+  padding: 7px 12px 9px 12px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+
   @media (min-width: @medium-width) {
     display: none;
+  }
+}
+
+.header__burger-icon {
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -7px;
+    width: 24px;
+    height: 2px;
+    background-color: black;
+  }
+}
+
+.header__burger-icon--opened {
+  background-color: transparent;
+  &::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  &::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}
+
+.header__wrapper {
+  grid-column: ~"1/-1";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 10px 0;
+  .add-base-padding;
+  @media (min-width: @medium-width) {
+    grid-column: ~"1/2";
   }
 }
