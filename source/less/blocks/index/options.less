@@ -1,7 +1,7 @@
 @import "../../variables";
 
 .options {
-  .add-base-padding;
+  .add-base-left-right-padding;
   display: grid;
   grid-gap: 20px;
 
@@ -25,20 +25,20 @@
 
 .options__title {
   font-family: @base-font;
-  .add-font-size(24px, 400, 37px);
+  .add-font-size-height-weight(24px, 400, 37px);
   color: @base-font-color;
   text-transform: uppercase;
 }
 
 .options__description {
   font-family: @alternate-font;
-  .add-font-size-small;
+  .add-font-size-height-weight-small;
   color: @base-font-color;
 }
 
 .options__link {
   font-family: @base-font;
-  .add-font-size(16px, 400, 16px);
+  .add-font-size-height-weight(16px, 400, 16px);
   text-decoration: none;
   color: @base-font-color;
   text-transform: uppercase;

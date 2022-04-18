@@ -17,11 +17,20 @@
 .menu__link {
   font-family: @base-font;
   padding: 22px 16px 24px 16px;
-  .add-font-size(20px, 500, 20px);
+  .add-font-size-height-weight(20px, 500, 20px);
   color: @base-font-color;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(18px, 500, 24px);
+  }
+
+  @media (min-width: @large-width) {
+    color: @alternate-font-color;
+    .add-font-size-height-weight(20px, 400, 30px);
+  }
 }
 
 .menu__link--active::before {

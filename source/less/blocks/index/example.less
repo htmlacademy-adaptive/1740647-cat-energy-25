@@ -2,7 +2,7 @@
 
 .example {
   background-color: @secondary-color;
-  .add-base-padding;
+  .add-base-left-right-padding;
 
   @media (min-width: @medium-width) {
     display: grid;
@@ -12,7 +12,7 @@
 
 .example__title {
   font-family: @base-font;
-  .add-font-size(36px, 400, 40px);
+  .add-font-size-height-weight(36px, 400, 40px);
   grid-column: ~"1 / -1";
 
   @media (min-width: @large-width) {
@@ -22,7 +22,7 @@
 
 .example__description {
   font-family: @alternate-font;
-  .add-font-size-small;
+  .add-font-size-height-weight-small;
   grid-column: ~"1 / -1";
 
   @media (min-width: @large-width) {
@@ -40,7 +40,7 @@
 
 .example__total-cash {
   font-family: @base-font;
-  .add-font-size(14px, 400, 20px);
+  .add-font-size-height-weight(14px, 400, 20px);
   color: @base-font-color;
   text-transform: uppercase;
 
