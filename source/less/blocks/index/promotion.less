@@ -21,9 +21,11 @@
 }
 
 .promotion--desktop-position {
-  margin-top: -76px;
-  padding-top: 223px;
-  margin-bottom: 82px;
+  @media (min-width: @large-width) {
+    margin-top: -76px;
+    padding-top: 223px;
+    margin-bottom: 82px;
+  }
 }
 
 .promotion__title {
