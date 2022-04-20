@@ -6,10 +6,12 @@
 
   @media (min-width: @medium-width) {
     grid-template-columns: 20% 80%;
+    .add-base-left-right-padding(30px, 30px);
   }
 
   @media (min-width: @large-width) {
     grid-template-columns: 20% 80%;
+    .add-base-left-right-padding(110px, 110px);
   }
 }
 
@@ -72,6 +74,7 @@
   align-items: center;
   padding: 10px 0 10px 0;
   .add-base-left-right-padding;
+
   @media (min-width: @medium-width) {
     grid-column: ~"1/2";
   }

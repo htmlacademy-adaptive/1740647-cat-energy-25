@@ -52,9 +52,22 @@
 .invite__wrapper {
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .invite__wrapper {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }
 .invite__text {
+  margin: 0;
+  padding: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -62,12 +75,35 @@
   color: #000000;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .invite__text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}
 .invite__address {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #000000;
+}
+@media (min-width: 768px) {
+  .invite__address {
+    text-align: end;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+.invite__address--tablet-br {
+  display: none;
+}
+@media (min-width: 768px) {
+  .invite__address--tablet-br {
+    display: inline-block;
+  }
 }
 .map {
   background-image: url("../../../../img/map.jpg");
@@ -118,11 +154,15 @@
 @media (min-width: 768px) {
   .header {
     grid-template-columns: 20% 80%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media (min-width: 1440px) {
   .header {
     grid-template-columns: 20% 80%;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 .header__burger {
@@ -433,6 +473,18 @@
   padding-top: 20px;
   padding-bottom: 49px;
 }
+@media (min-width: 768px) {
+  .features {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .features {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
 .features__title {
   margin: 0 0 40px 0;
   font-family: "Oswald", sans-serif;
@@ -480,12 +532,16 @@
 @media (min-width: 768px) {
   .options {
     grid-gap: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 @media (min-width: 1440px) {
   .options {
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 .options__text-hidden {

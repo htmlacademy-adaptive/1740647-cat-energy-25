@@ -4,6 +4,14 @@
   .add-base-left-right-padding;
   padding-top: 20px;
   padding-bottom: 49px;
+
+  @media (min-width: @medium-width) {
+    .add-base-left-right-padding(30px, 30px);
+  }
+
+  @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
+  }
 }
 
 .features__title {
