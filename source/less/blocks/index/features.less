@@ -2,12 +2,20 @@
 
 .features {
   .add-base-left-right-padding;
+  padding-top: 20px;
+  padding-bottom: 49px;
 }
 
 .features__title {
+  margin: 0 0 40px 0;
   font-family: @base-font;
   .add-font-size-height-weight(36px, 400, 40px);
   color: @base-font-color;
+
+  @media (min-width: @medium-width) {
+    margin-bottom: 63px;
+    .add-font-size-height-weight(60px, 400, 60px);
+  }
 }
 
 .features__list {
@@ -18,9 +26,11 @@
   @media (min-width: @medium-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 37px;
   }
 
   @media (min-width: @large-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 94px;
   }
 }
