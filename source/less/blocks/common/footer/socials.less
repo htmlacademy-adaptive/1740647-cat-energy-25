@@ -1,5 +1,28 @@
 @import "../../../variables";
 
+.socials {
+  padding-top: 23px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #D9D9D9;
+
+  @media (min-width: @medium-width) {
+    border-bottom: transparent;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
+.social-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 24px;
+}
+
 .socials__text-hidden {
   .add-visually-hidden;
 }
