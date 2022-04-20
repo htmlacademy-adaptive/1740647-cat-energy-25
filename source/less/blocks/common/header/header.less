@@ -30,7 +30,7 @@
 .header__burger-icon {
   width: 24px;
   height: 2px;
-  background-color: black;
+  background-color: #000000;
   position: absolute;
   left: 0;
 
@@ -41,7 +41,7 @@
     top: 7px;
     width: 24px;
     height: 2px;
-    background-color: black;
+    background-color: #000000;
   }
 
   &::after {
@@ -51,16 +51,18 @@
     top: -7px;
     width: 24px;
     height: 2px;
-    background-color: black;
+    background-color: #000000;
   }
 }
 
 .header__burger-icon--opened {
   background-color: transparent;
+
   &::before {
     transform: rotate(45deg);
     top: 0;
   }
+
   &::after {
     transform: rotate(-45deg);
     top: 0;
