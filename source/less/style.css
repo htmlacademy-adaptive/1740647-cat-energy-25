@@ -227,6 +227,32 @@
     grid-column: 1/2;
   }
 }
+@media (min-width: 768px) {
+  .logo-link--small {
+    display: none;
+  }
+}
+.logo-link--medium {
+  display: none;
+}
+@media (min-width: 768px) {
+  .logo-link--medium {
+    display: block;
+  }
+}
+@media (min-width: 1440px) {
+  .logo-link--medium {
+    display: none;
+  }
+}
+.logo-link--large {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .logo-link--large {
+    display: block;
+  }
+}
 .menu {
   list-style-type: none;
   margin: 0;

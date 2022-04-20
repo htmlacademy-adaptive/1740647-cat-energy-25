@@ -1,1 +1,27 @@
 @import "../../../variables";
+
+.logo-link--small {
+  @media (min-width: @medium-width) {
+    display: none;
+  }
+}
+
+.logo-link--medium {
+  display: none;
+
+  @media (min-width: @medium-width) {
+    display: block;
+  }
+
+  @media (min-width: @large-width) {
+    display: none;
+  }
+}
+
+.logo-link--large {
+  display: none;
+
+  @media (min-width: @large-width) {
+    display: block;
+  }
+}
