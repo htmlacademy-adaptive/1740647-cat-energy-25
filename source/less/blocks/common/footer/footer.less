@@ -1,10 +1,31 @@
 @import "../../../variables";
 
 .footer__wrapper {
-  .add-base-padding;
+  .add-base-left-right-padding;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @medium-width) {
+    .add-base-left-right-padding(30px, 30px);
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+  }
+
+  @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
+  }
+}
+
+.footer__logo-link {
+  display: flex;
+  padding-top: 39px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #d9d9d9;
+  justify-content: center;
+
+  @media (min-width: @medium-width) {
+    border-bottom: transparent;
   }
 }

@@ -4,6 +4,7 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import groupMediaQueries from 'gulp-group-css-media-queries';
 
 // Styles
 
@@ -11,6 +12,7 @@ export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
+    .pipe(groupMediaQueries())
     .pipe(postcss([
       autoprefixer()
     ]))

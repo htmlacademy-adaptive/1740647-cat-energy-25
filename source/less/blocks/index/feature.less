@@ -2,6 +2,14 @@
 
 .feature__text {
   font-family: @alternate-font;
-  .add-font-size-small;
+  .add-font-size-height-weight-small;
   color: @base-font-color;
+  padding-left: 81px;
+
+  @media (min-width: @medium-width) {
+    padding-left: 0;
+    padding-top: 120px;
+    padding-bottom: 57px;
+    .add-font-size-height-weight(16px, 400, 24px);
+  }
 }

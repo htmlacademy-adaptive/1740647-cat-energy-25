@@ -5,41 +5,73 @@
   background-image: url("../../../img/mobile-background-cat.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  .add-base-padding;
+  padding-top: 27px;
+  padding-bottom: 20px;
+  .add-base-left-right-padding;
 
   @media (min-width: @medium-width) {
     background-image: none;
+    padding-bottom: 526px; //не уверен что правильно делаю. У меня два варианта как сделать больше пространства, либо как сделал сейчас либо задать min-height.
   }
-  /* Заметил что фон на десктопе заходит на меню, пока не стал с этим заморачиваться. Думаю придется контейнер отдельно делать и позиционаровать абсолютно чтобы фон занести на меню*/
+
   @media (min-width: @large-width) {
+    padding-bottom: 185px;
     background-image: url("../../../img/desktop-background-cat.jpg");
     background-position: right;
     background-size: 50% auto;
   }
 }
 
+.promotion--desktop-position {
+  @media (min-width: @large-width) {
+    margin-top: -76px;
+    padding-top: 223px;
+    margin-bottom: 82px;
+  }
+}
+
 .promotion__title {
   margin-top: 0;
+  margin-bottom: 25px;
   font-family: @base-font;
-  .add-font-size(36px, 400, 36px);
+  text-align: center;
+  .add-font-size-height-weight(36px, 400, 36px);
   color: @alternate-font-color;
 
   @media (min-width: @medium-width) {
+    .add-font-size-height-weight(60px, 400, 60px);
     color: @base-font-color;
+    text-align: left;
+    margin-bottom: 41px;
   }
 }
 
 .promotion__text {
   font-family: @base-font;
-  .add-font-size(14px, 400, 14px);
+  text-align: center;
+  margin-bottom: 302px;
+  .add-font-size-height-weight(14px, 400, 14px);
   color: @alternate-font-color;
   text-transform: uppercase;
 
   @media (min-width: @medium-width) {
+    .add-font-size-height-weight(20px, 400, 20px);
     color: @base-font-color;
+    text-align: left;
+    margin-bottom: 49px;
   }
 }
 
 .promotion__program-link {
+  display: block;
+  box-sizing: border-box;
   text-decoration: none;
+  text-align: center;
+  padding: 10px 44px;
+
+  @media (min-width: @medium-width) {
+    width: 244px;
+    padding: 14px 26px;
+    .add-font-size-height-weight(20px, 400, 20px);
+  }
 }

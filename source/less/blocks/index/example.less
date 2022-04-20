@@ -2,28 +2,60 @@
 
 .example {
   background-color: @secondary-color;
-  .add-base-padding;
+  .add-base-left-right-padding;
+  padding-top: 25px;
 
   @media (min-width: @medium-width) {
+    background-color: #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @large-width) {
+    .add-base-left-right-padding(0, 0);
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @medium-width) {
+    grid-column: ~"1 / -1";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
+    background-color: @secondary-color;
   }
 }
 
 .example__title {
+  margin: 0 0 40px 0;
+  padding: 0;
   font-family: @base-font;
-  .add-font-size(36px, 400, 40px);
-  grid-column: ~"1 / -1";
+  .add-font-size-height-weight(36px, 400, 40px);
+
+  @media (min-width: @medium-width) {
+    grid-column: ~"1 / -1";
+    .add-font-size-height-weight(60px, 400, 60px);
+  }
 
   @media (min-width: @large-width) {
+    margin-left: 110px;
     grid-column: ~"1 / 2";
   }
 }
 
 .example__description {
   font-family: @alternate-font;
-  .add-font-size-small;
+  .add-font-size-height-weight-small;
   grid-column: ~"1 / -1";
+  margin-bottom: 20px;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(16px, 400, 24px);
+    margin-bottom: 54px;
+  }
 
   @media (min-width: @large-width) {
     grid-column: ~"1 / 2";
@@ -32,6 +64,15 @@
 
 .example__container {
   display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+
+  @media (min-width: @medium-width) {
+    display: grid;
+    grid-template-columns: 162px 162px;
+    grid-gap: 42px;
+    justify-content: start;
+  }
 
   @media (min-width: @large-width) {
     grid-column: ~"1 / 2";
@@ -39,13 +80,34 @@
 }
 
 .example__total-cash {
+  display: block;
   font-family: @base-font;
-  .add-font-size(14px, 400, 20px);
+  .add-font-size-height-weight(14px, 400, 20px);
   color: @base-font-color;
   text-transform: uppercase;
+  margin-bottom: 40px;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(20px, 400, 20px);
+    text-align: end;
+    margin-bottom: 72px;
+  }
 
   @media (min-width: @large-width) {
     grid-column: ~"1 / 2";
+    text-align: start;
+  }
+}
+
+.example__total-cash--br {
+  display: none;
+
+  @media (min-width: @medium-width) {
+    display: inline-block;
+  }
+
+  @media (min-width: @large-width) {
+    display: none;
   }
 }
 

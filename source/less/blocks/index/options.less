@@ -1,17 +1,19 @@
 @import "../../variables";
 
 .options {
-  .add-base-padding;
+  .add-base-left-right-padding;
   display: grid;
   grid-gap: 20px;
 
   @media (min-width: @medium-width) {
     grid-gap: 30px;
+    .add-base-left-right-padding(30px, 30px);
   }
 
   @media (min-width: @large-width) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
+    .add-base-left-right-padding(110px, 110px);
   }
 }
 
@@ -21,25 +23,62 @@
 
 .options__card {
   background-color: @secondary-color;
+  padding: 21px 33px 0 20px;
+
+  @media (min-width: @medium-width) {
+    padding: 77px 316px 35px 53px;
+  }
+
+  @media (min-width: @large-width) {
+    padding-right: 51px;
+  }
 }
 
 .options__title {
+  margin: 0 0 29px 71px;
   font-family: @base-font;
-  .add-font-size(24px, 400, 37px);
+  .add-font-size-height-weight(24px, 400, 37px);
   color: @base-font-color;
   text-transform: uppercase;
+
+  @media (min-width: @medium-width) {
+    margin-left: 0;
+    margin-bottom: 24px;
+    .add-font-size-height-weight(36px, 400, 36px);
+  }
+
+  @media (min-width: @medium-width) {
+    margin-left: 214px;
+    margin-bottom: 73px;
+  }
 }
 
 .options__description {
+  margin: 0;
+  padding-bottom: 23px;
   font-family: @alternate-font;
-  .add-font-size-small;
+  .add-font-size-height-weight-small;
   color: @base-font-color;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(16px, 400, 25px);
+    border-bottom: transparent;
+    margin-bottom: 33px;
+  }
 }
 
 .options__link {
+  display: block;
+  margin: 0;
+  padding: 19px 0 22px 0;
   font-family: @base-font;
-  .add-font-size(16px, 400, 16px);
+  .add-font-size-height-weight(16px, 400, 16px);
   text-decoration: none;
   color: @base-font-color;
   text-transform: uppercase;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(20px, 400, 30px);
+  }
 }

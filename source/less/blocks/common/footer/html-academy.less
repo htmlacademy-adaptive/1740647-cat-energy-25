@@ -1,11 +1,28 @@
 @import "../../../variables";
 
+.html-academy {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @medium-width) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+}
+
 .html-academy__text-hidden {
   .add-visually-hidden;
 }
 
 .html-academy__logo-text {
   font-family: @alternate-font;
-  .add-font-size(16px, 400, 18px);
+  .add-font-size-height-weight(16px, 400, 18px);
   color: @base-font-color;
+}
+
+.html-academy__link {
+  margin-left: 22px;
 }
