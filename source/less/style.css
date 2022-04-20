@@ -400,8 +400,20 @@
 }
 .options__card {
   background-color: #F2F2F2;
+  padding: 21px 33px 0 20px;
+}
+@media (min-width: 768px) {
+  .options__card {
+    padding: 77px 316px 35px 53px;
+  }
+}
+@media (min-width: 1440px) {
+  .options__card {
+    padding-right: 51px;
+  }
 }
 .options__title {
+  margin: 0 0 29px 71px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -409,14 +421,44 @@
   color: #000000;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .options__title {
+    margin-left: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .options__title {
+    margin-left: 214px;
+    margin-bottom: 73px;
+  }
+}
 .options__description {
+  margin: 0;
+  padding-bottom: 23px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: #000000;
+  border-bottom: 1px solid #D9D9D9;
+}
+@media (min-width: 768px) {
+  .options__description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    border-bottom: transparent;
+    margin-bottom: 33px;
+  }
 }
 .options__link {
+  display: block;
+  margin: 0;
+  padding: 19px 0 22px 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -425,19 +467,27 @@
   color: #000000;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .options__link {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
 .promotion {
   background-color: #ffffff;
   background-image: url("../../../img/mobile-background-cat.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   padding-top: 27px;
+  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  /* Заметил что фон на десктопе заходит на меню, пока не стал с этим заморачиваться. Думаю придется контейнер отдельно делать и позиционаровать абсолютно чтобы фон занести на меню*/
 }
 @media (min-width: 768px) {
   .promotion {
     background-image: none;
+    padding-bottom: 526px;
   }
 }
 @media (min-width: 1440px) {

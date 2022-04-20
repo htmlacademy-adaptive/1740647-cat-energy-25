@@ -6,12 +6,14 @@
   background-size: 100% auto;
   background-repeat: no-repeat;
   padding-top: 27px;
+  padding-bottom: 20px;
   .add-base-left-right-padding;
 
   @media (min-width: @medium-width) {
     background-image: none;
+    padding-bottom: 526px; //не уверен что правильно делаю. У меня два варианта как сделать больше пространства, либо как сделал сейчас либо задать min-height.
   }
-  /* Заметил что фон на десктопе заходит на меню, пока не стал с этим заморачиваться. Думаю придется контейнер отдельно делать и позиционаровать абсолютно чтобы фон занести на меню*/
+
   @media (min-width: @large-width) {
     padding-bottom: 185px;
     background-image: url("../../../img/desktop-background-cat.jpg");
