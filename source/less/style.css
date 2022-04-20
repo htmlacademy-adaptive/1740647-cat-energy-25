@@ -285,6 +285,26 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+@media (min-width: 1440px) {
+  .example {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .example__wrapper {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1440px) {
+  .example__wrapper {
+    padding-left: 110px;
+    padding-right: 110px;
+    background-color: #F2F2F2;
+  }
+}
 .example__title {
   margin: 0 0 40px 0;
   padding: 0;
@@ -292,10 +312,10 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
-  grid-column: 1 / -1;
 }
 @media (min-width: 768px) {
   .example__title {
+    grid-column: 1 / -1;
     font-size: 60px;
     font-weight: 400;
     line-height: 60px;
@@ -303,6 +323,7 @@
 }
 @media (min-width: 1440px) {
   .example__title {
+    margin-left: 110px;
     grid-column: 1 / 2;
   }
 }
@@ -357,6 +378,9 @@
 }
 @media (min-width: 768px) {
   .example__total-cash {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
     text-align: end;
     margin-bottom: 72px;
   }
@@ -364,6 +388,7 @@
 @media (min-width: 1440px) {
   .example__total-cash {
     grid-column: 1 / 2;
+    text-align: start;
   }
 }
 .example__total-cash--br {
@@ -372,6 +397,11 @@
 @media (min-width: 768px) {
   .example__total-cash--br {
     display: inline-block;
+  }
+}
+@media (min-width: 1440px) {
+  .example__total-cash--br {
+    display: none;
   }
 }
 @media (min-width: 1440px) {
