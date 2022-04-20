@@ -10,6 +10,10 @@
   .add-font-size-height-weight(24px, 400, 24px);
   color: @base-font-color;
   text-transform: uppercase;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(30px, 400, 37px);
+  }
 }
 
 .result__prompt {
@@ -17,4 +21,8 @@
   .add-font-size-height-weight(12px, 400, 100%);
   color: @base-font-color;
   text-transform: lowercase;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(14px, 400, 14px);
+  }
 }

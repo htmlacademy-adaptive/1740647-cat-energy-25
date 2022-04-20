@@ -276,19 +276,30 @@
   background-color: #F2F2F2;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 25px;
 }
 @media (min-width: 768px) {
   .example {
+    background-color: #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 .example__title {
+  margin: 0 0 40px 0;
+  padding: 0;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
   grid-column: 1 / -1;
+}
+@media (min-width: 768px) {
+  .example__title {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+  }
 }
 @media (min-width: 1440px) {
   .example__title {
@@ -301,6 +312,15 @@
   line-height: 18px;
   font-weight: 400;
   grid-column: 1 / -1;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .example__description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
 }
 @media (min-width: 1440px) {
   .example__description {
@@ -309,6 +329,16 @@
 }
 .example__container {
   display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .example__container {
+    display: grid;
+    grid-template-columns: 162px 162px;
+    grid-gap: 42px;
+    justify-content: start;
+  }
 }
 @media (min-width: 1440px) {
   .example__container {
@@ -316,16 +346,32 @@
   }
 }
 .example__total-cash {
+  display: block;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   color: #000000;
   text-transform: uppercase;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .example__total-cash {
+    text-align: end;
+    margin-bottom: 72px;
+  }
 }
 @media (min-width: 1440px) {
   .example__total-cash {
     grid-column: 1 / 2;
+  }
+}
+.example__total-cash--br {
+  display: none;
+}
+@media (min-width: 768px) {
+  .example__total-cash--br {
+    display: inline-block;
   }
 }
 @media (min-width: 1440px) {
@@ -597,6 +643,13 @@
   color: #000000;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .result__text {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 37px;
+  }
+}
 .result__prompt {
   font-family: "Arial", sans-serif;
   font-size: 12px;
@@ -604,6 +657,13 @@
   line-height: 100%;
   color: #000000;
   text-transform: lowercase;
+}
+@media (min-width: 768px) {
+  .result__prompt {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+  }
 }
 .slider__text {
   font-family: "Oswald", sans-serif;
