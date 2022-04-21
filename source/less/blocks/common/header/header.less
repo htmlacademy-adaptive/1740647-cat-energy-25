@@ -3,6 +3,7 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
 
   @media (min-width: @medium-width) {
     grid-template-columns: 20% 80%;
@@ -10,8 +11,35 @@
   }
 
   @media (min-width: @large-width) {
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 50% 50%;
     .add-base-left-right-padding(110px, 110px);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -302px;
+    width: 100%;
+    background-color: @base-color;
+    background-image: url("../../../../img/mobile-background-cat.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    min-height: 302px;
+    z-index: -1;
+
+    @media (min-width: @medium-width) {
+      display: none;
+    }
+
+    @media (min-width: @large-width) {
+      display: block;
+      background-image: url("../../../../img/desktop-background-cat.jpg");
+      top: 0;
+      right: 0;
+      width: 50%;
+      min-height: 694px;
+    }
   }
 }
 

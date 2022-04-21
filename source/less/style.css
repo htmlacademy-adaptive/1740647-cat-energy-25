@@ -12,6 +12,9 @@
   src: url("../fonts/oswaldmedium.woff") format("woff"), url("../fonts/oswaldmedium.woff2") format("woff2");
   font-display: swap;
 }
+.page {
+  height: 100%;
+}
 .footer__wrapper {
   padding-left: 20px;
   padding-right: 20px;
@@ -211,6 +214,7 @@
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
 }
 @media (min-width: 768px) {
   .header {
@@ -221,9 +225,37 @@
 }
 @media (min-width: 1440px) {
   .header {
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 50% 50%;
     padding-left: 110px;
     padding-right: 110px;
+  }
+}
+.header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -302px;
+  width: 100%;
+  background-color: #68B738;
+  background-image: url("../../../../img/mobile-background-cat.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  min-height: 302px;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .header:after {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .header:after {
+    display: block;
+    background-image: url("../../../../img/desktop-background-cat.jpg");
+    top: 0;
+    right: 0;
+    width: 50%;
+    min-height: 694px;
   }
 }
 .header__burger {
@@ -607,8 +639,12 @@
   }
 }
 .main-body {
+  margin: 0 auto;
+  max-width: 1440px;
   min-height: 100%;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .options {
   padding-left: 20px;
@@ -642,6 +678,8 @@
   overflow: hidden;
 }
 .options__card {
+  display: flex;
+  flex-direction: column;
   background-color: #F2F2F2;
   padding: 21px 33px 0 20px;
 }
@@ -700,7 +738,7 @@
 }
 .options__link {
   display: block;
-  margin: 0;
+  margin: auto 0 0 0;
   padding: 19px 0 22px 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -718,10 +756,7 @@
   }
 }
 .promotion {
-  background-color: #ffffff;
-  background-image: url("../../../img/mobile-background-cat.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  background-color: transparent;
   padding-top: 27px;
   padding-bottom: 20px;
   padding-left: 20px;
@@ -730,22 +765,18 @@
 @media (min-width: 768px) {
   .promotion {
     background-image: none;
+    padding-top: 78px;
     padding-bottom: 526px;
+    padding-left: 117px;
+    padding-right: 30px;
   }
 }
 @media (min-width: 1440px) {
   .promotion {
-    padding-bottom: 185px;
-    background-image: url("../../../img/desktop-background-cat.jpg");
-    background-position: right;
-    background-size: 50% auto;
-  }
-}
-@media (min-width: 1440px) {
-  .promotion--desktop-position {
-    margin-top: -76px;
-    padding-top: 223px;
-    margin-bottom: 82px;
+    padding-top: 110px;
+    padding-bottom: 304px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 .promotion__title {
@@ -845,6 +876,9 @@
   line-height: 20px;
   color: #000000;
   text-transform: uppercase;
+}
+.main {
+  flex-grow: 1;
 }
 @media (min-width: 1440px) {
   .addition {
