@@ -5,8 +5,15 @@
   margin: 0;
   padding: 0;
   grid-column: ~"1 / -1";
+  background-color: #ffffff;
+  position: absolute;
+  top: 65px;
+  width: 100%;
 
   @media (min-width: @medium-width) {
+    position: relative;
+    top: 0;
+    background-color: transparent;
     grid-column: ~"2 / -1";
     display: flex;
     justify-content: end;
@@ -25,15 +32,34 @@
 
   @media (min-width: @medium-width) {
     .add-font-size-height-weight(18px, 500, 24px);
+    color: inherit;
   }
 
   @media (min-width: @large-width) {
-    color: @alternate-font-color;
     .add-font-size-height-weight(20px, 400, 30px);
+    color: inherit;
+  }
+}
+
+.menu--main {
+  @media (min-width: @large-width) {
+    color: @alternate-font-color;
   }
 }
 
 .menu__link--active::before {
+  @media (min-width: @medium-width) {
+    content: "";
+    position: absolute;
+    right: 16px;
+    bottom: 3px;
+    left: 16px;
+    height: 2px;
+    background-color: @base-color;
+  }
+}
+
+.menu__link-main--active::before {
   @media (min-width: @medium-width) {
     content: "";
     position: absolute;

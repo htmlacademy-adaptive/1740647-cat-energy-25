@@ -230,11 +230,11 @@
     padding-right: 110px;
   }
 }
-.header:after {
+.header--main:after {
   content: '';
   display: block;
   position: absolute;
-  bottom: -302px;
+  top: 65px;
   width: 100%;
   background-color: #68B738;
   background-image: url("../../../../img/mobile-background-cat.jpg");
@@ -244,12 +244,12 @@
   z-index: -1;
 }
 @media (min-width: 768px) {
-  .header:after {
+  .header--main:after {
     display: none;
   }
 }
 @media (min-width: 1440px) {
-  .header:after {
+  .header--main:after {
     display: block;
     background-image: url("../../../../img/desktop-background-cat.jpg");
     top: 0;
@@ -351,9 +351,16 @@
   margin: 0;
   padding: 0;
   grid-column: 1 / -1;
+  background-color: #ffffff;
+  position: absolute;
+  top: 65px;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .menu {
+    position: relative;
+    top: 0;
+    background-color: transparent;
     grid-column: 2 / -1;
     display: flex;
     justify-content: end;
@@ -376,14 +383,20 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
+    color: inherit;
   }
 }
 @media (min-width: 1440px) {
   .menu__link {
-    color: #ffffff;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
+    color: inherit;
+  }
+}
+@media (min-width: 1440px) {
+  .menu--main {
+    color: #ffffff;
   }
 }
 @media (min-width: 768px) {
@@ -397,8 +410,19 @@
     background-color: #68B738;
   }
 }
+@media (min-width: 768px) {
+  .menu__link-main--active::before {
+    content: "";
+    position: absolute;
+    right: 16px;
+    bottom: 3px;
+    left: 16px;
+    height: 2px;
+    background-color: #68B738;
+  }
+}
 @media (min-width: 1440px) {
-  .menu__link--active::before {
+  .menu__link-main--active::before {
     background-color: #ffffff;
   }
 }
@@ -430,6 +454,14 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .example {
   background-color: #F2F2F2;
@@ -637,14 +669,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 94px;
   }
-}
-.main-body {
-  margin: 0 auto;
-  max-width: 1440px;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 .options {
   padding-left: 20px;
