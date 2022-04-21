@@ -1,5 +1,16 @@
+@import "../../variables";
+
 .characteristics-list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 15px 0;
+}
+
+.characteristics-list--addition {
+  @media (min-width: @large-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
 }

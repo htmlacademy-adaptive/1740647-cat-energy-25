@@ -11,6 +11,18 @@
   }
 }
 
+.characteristics-item--addition {
+  @media (min-width: @medium-width) {
+    border: none;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @large-width) {
+    padding: 0;
+  }
+}
+
 .characteristics-item__key {
   font-family: @alternate-font;
   .add-font-size-height-weight(12px, 400, 16px);
