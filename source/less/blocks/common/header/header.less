@@ -4,19 +4,23 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  border-bottom: 1px solid #ebebeb;
 
   @media (min-width: @medium-width) {
     grid-template-columns: 20% 80%;
     .add-base-left-right-padding(30px, 30px);
+    border-bottom: none;
   }
 
   @media (min-width: @large-width) {
     grid-template-columns: 50% 50%;
     .add-base-left-right-padding(110px, 110px);
+    border-bottom: none;
   }
 }
 
 .header--main {
+  border-bottom: none;
   &:after {
     content: '';
     display: block;

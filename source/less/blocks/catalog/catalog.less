@@ -9,12 +9,22 @@
 }
 
 .catalog__title {
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 41px;
   .add-base-left-right-padding;
   font-family: @base-font;
   .add-font-size-height-weight(36px, 400, 36px);
   color: @base-font-color;
 
+  @media (min-width: @medium-width) {
+    .add-base-left-right-padding(30px, 30px);
+    padding-bottom: 163px;
+  }
+
   @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
     grid-column: ~"1 / -1";
+    padding-bottom: 165px;
   }
 }
