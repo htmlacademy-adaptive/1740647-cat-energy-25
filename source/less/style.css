@@ -1102,7 +1102,7 @@
     border-right: none;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 38px;
-    padding: 28px 0;
+    padding: 15px 0;
   }
 }
 .additional-product:last-child {
@@ -1418,9 +1418,24 @@
 .promo__wrapper {
   background-color: #68B738;
   background-image: url("../../../img/catalog-promo.jpg");
+  background-position: center;
+  min-height: 289px;
   width: 100%;
-  background-size: auto 100%;
+  background-size: 100% auto;
   background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .promo__wrapper {
+    background-image: url("../../../img/catalog-promo-medium.jpg");
+    min-height: 0;
+    background-size: 100% auto;
+  }
+}
+@media (min-width: 1440px) {
+  .promo__wrapper {
+    background-image: url("../../../img/catalog-promo.jpg");
+    background-size: auto 100%;
+  }
 }
 .promo__title-hidden {
   position: absolute;
