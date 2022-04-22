@@ -1,19 +1,24 @@
 @import "../../variables";
 
 .promo {
-  .add-base-left-right-padding;
+  display: flex;
+
+  @media (min-width: @medium-width) {
+    min-height: 200px;
+    width: 100%;
+  }
 
   @media (min-width: @large-width) {
-    grid-column: ~"2 / -1";
+    grid-column: ~"4 / -1";
   }
 }
 
 .promo__wrapper {
   background-color: @base-color;
   background-image: url("../../../img/catalog-promo.jpg");
+  width: 100%;
   background-size: auto 100%;
   background-repeat: no-repeat;
-  min-height: 600px;
 }
 
 .promo__title-hidden {
