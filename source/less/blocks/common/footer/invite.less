@@ -1,5 +1,11 @@
 @import "../../../variables";
 
+.invite {
+  display: flex;
+  flex-direction: column;
+  background-color: @secondary-color;
+}
+
 .invite__text-hidden {
   .add-visually-hidden;
 }
@@ -15,6 +21,12 @@
     .add-base-left-right-padding(70px, 70px);
     padding-top: 56px;
     padding-bottom: 56px;
+  }
+}
+
+.invite__wrapper--alternate-color {
+  @media (min-width: @medium-width) {
+    background-color: #ffffff;
   }
 }
 

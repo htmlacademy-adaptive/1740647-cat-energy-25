@@ -1,20 +1,54 @@
 @import "../../variables";
 
 .program-form {
-  .add-base-left-right-padding;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+
+  @media (min-width: @medium-width) {
+    display: block;
+    padding-bottom: 72px;
+    .add-base-left-right-padding(70px, 65px);
+  }
 
   @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 67px;
+    padding-bottom: 82px;
   }
 }
 
 .program-form__button {
+  box-sizing: border-box;
+  align-self: center;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 280px;
   .add-font-size-height-weight(16px, 400, 20px);
+
+  @media (min-width: @medium-width) {
+    margin-bottom: 0;
+    .add-font-size-height-weight(20px, 400, 20px);
+    margin-right: 61px;
+  }
+
+  @media (min-width: @large-width) {
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .program-form__required-text {
+  align-self: center;
   font-family: @alternate-font;
   .add-font-size-height-weight(14px, 400, 16px);
   color: @base-font-color;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(16px, 400, 16px);
+  }
 }

@@ -1,20 +1,55 @@
 @import "../../variables";
 
 .base-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #ebebeb;
   .add-base-left-right-padding;
+  padding-top: 19px;
+  padding-bottom: 25px;
 
   @media (min-width: @medium-width) {
     background-color: @secondary-color;
+    grid-template-columns: 1fr;
+    .add-base-left-right-padding(39px, 37px);
+    padding-bottom: 39px;
+    border-top: none;
+  }
+}
+
+.base-product__link {
+  margin: 0;
+  padding: 0;
+  grid-column: ~"1 / 2";
+
+  @media (min-width: @medium-width) {
+    grid-column: ~"1 / -1";
+  }
+}
+
+.base-product__wrapper {
+  grid-column: ~"2 / -1";
+
+  @media (min-width: @medium-width) {
+    grid-column: ~"1 / -1";
   }
 }
 
 .base-product__title {
+  margin: 0 0 14px 0;
   font-family: @base-font;
   .add-font-size-height-weight(16px, 400, 20px);
   color: @base-font-color;
   text-transform: uppercase;
+
+  @media (min-width: @medium-width) {
+    text-align: center;
+  }
 }
 
 .base-product__button {
   .add-font-size-height-weight(16px, 400, 20px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  grid-column: ~"1/ -1";
 }

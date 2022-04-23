@@ -1,18 +1,50 @@
 @import "../../variables";
 
+.form {
+  flex-grow: 1;
+}
+
 .form__wrapper {
   .add-base-left-right-padding;
+
+  @media (min-width: @medium-width) {
+    .add-base-left-right-padding(71px, 65px);
+  }
+
+  @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
+  }
 }
 
 .form__title {
   font-family: @base-font;
   .add-font-size-height-weight(36px, 400, 36px);
   color: @base-font-color;
+  margin-top: 27px;
+  margin-bottom: 37px;
+
+  @media (min-width: @medium-width) {
+    margin-top: 75px;
+    margin-bottom: 54px;
+    .add-font-size-height-weight(60px, 400, 60px);
+  }
+
+  @media (min-width: @large-width) {
+    margin-top: 87px;
+    margin-bottom: 56px;
+  }
 }
 
 .form__text {
+  display: block;
   font-family: @base-font;
   .add-font-size-height-weight-small;
   color: @base-font-color;
   text-transform: uppercase;
+  margin-bottom: 39px;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(20px, 400, 30px);
+    margin-bottom: 66px;
+  }
 }

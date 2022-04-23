@@ -3,10 +3,25 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  padding: 0 20px 23px 20px;
+  margin: 26px 0 0 0;
+  border: none;
+
+  @media (min-width: @medium-width) {
+    margin-top: 75px;
+    .add-base-left-right-padding(0, 0);
+    padding-bottom: 67px;
+  }
 
   @media (min-width: @large-width) {
     flex-direction: row;
     grid-column: ~"1 / -1";
+    margin-top: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 78px;
+    grid-row-gap: 20px;
   }
 }
 
@@ -14,4 +29,59 @@
   font-family: @base-font;
   .add-font-size-height-weight(24px, 400, 26px);
   color: @base-font-color;
+  margin-bottom: 35px;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(36px, 400, 36px);
+    margin-bottom: 76px;
+  }
+}
+
+.contacts__br {
+  @media (min-width: @medium-width) {
+    display: none;
+  }
+}
+
+.contacts__label {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__label:not(:last-child) {
+  margin-bottom: 14px;
+
+  @media (min-width: @medium-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @large-width) {
+    margin-bottom: 0;
+  }
+}
+
+.contacts__text {
+  text-align: center;
+  font-family: @base-font;
+  .add-font-size-height-weight(16px, 400, 18px);
+  color: @base-font-color;
+  text-transform: uppercase;
+  margin-right: 10px;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(20px, 400, 30px);
+  }
+}
+
+.contacts__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 40px 10px 15px;
+  font-family: @base-font;
+  .add-font-size-height-weight(16px, 400, 18px);
+  border: 1px solid #cdcdcd;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(20px, 400, 30px);
+  }
 }

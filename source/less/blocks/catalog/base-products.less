@@ -3,14 +3,18 @@
 .base-products {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 25px;
+  border-bottom: 1px solid #ebebeb;
 
   @media (min-width: @medium-width) {
+    .add-base-left-right-padding(30px, 30px);
     grid-template-columns: 1fr 1fr;
-    grid-gap: 60px;
+    grid-row-gap: 141px;
+    grid-column-gap: 60px;
+    border-bottom: none;
   }
 
   @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 80px;
     grid-column: ~"1 / -1";
@@ -19,4 +23,18 @@
 
 .base-products__title-hidden {
   .add-visually-hidden;
+}
+
+.base-product__title--small-br {
+  @media (min-width: @medium-width) {
+    display: none;
+  }
+}
+
+.base-product__title--medium-br {
+  display: none;
+
+  @media (min-width: @medium-width) {
+    display: block;
+  }
 }
