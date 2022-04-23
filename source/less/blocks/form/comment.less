@@ -1,7 +1,16 @@
 @import "../../variables";
 
 .comment {
+  margin: 0;
+  padding: 0 20px 22px 20px;
+  border: none;
+
+  @media (min-width: @medium-width) {
+    .add-base-left-right-padding(0, 0);
+  }
+
   @media (min-width: @large-width) {
+    padding-bottom: 0;
     grid-column: ~"1 / -1";
   }
 }
@@ -10,4 +19,38 @@
   font-family: @base-font;
   .add-font-size-height-weight(24px, 400, 26px);
   color: @base-font-color;
+  margin-bottom: 37px;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(36px, 400, 36px);
+    margin-bottom: 76px;
+  }
+}
+
+.comment__text-area {
+  resize: none;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  border: 1px solid #e7e7e7;
+  font-family: @base-font;
+  text-transform: uppercase;
+  color: @base-font-color;
+  .add-font-size-height-weight(16px, 400, 18px);
+
+  @media (min-width: @medium-width) {
+    height: 174px;
+    .add-font-size-height-weight(20px, 400, 30px);
+  }
+
+  &::placeholder {
+    font-family: @base-font;
+    text-transform: uppercase;
+    color: @base-font-color;
+    .add-font-size-height-weight(16px, 400, 18px);
+
+    @media (min-width: @medium-width) {
+      .add-font-size-height-weight(20px, 400, 30px);
+    }
+  }
 }
