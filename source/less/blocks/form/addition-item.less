@@ -1,8 +1,20 @@
 @import "../../variables";
 
+.addition-item:not(:last-child) {
+  margin-bottom: 25px;
+
+  @media (min-width: @medium-width) {
+    margin-bottom: 0;
+  }
+}
+
 .addition-item__text {
   font-family: @base-font;
   .add-font-size-height-weight(16px, 400, 18px);
   color: @base-font-color;
   text-transform: uppercase;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(20px, 400, 30px);
+  }
 }

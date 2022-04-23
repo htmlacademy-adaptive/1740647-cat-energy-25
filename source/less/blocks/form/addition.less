@@ -1,7 +1,17 @@
 @import "../../variables";
 
 .addition {
+  margin: 0;
+  padding: 0 20px 24px 20px;
+  border: none;
+
+  @media (min-width: @medium-width) {
+    .add-base-left-right-padding(0, 0);
+    padding-bottom: 54px;
+  }
+
   @media (min-width: @large-width) {
+    padding-bottom: 0;
     grid-column: ~"1 / -1";
   }
 }
@@ -10,6 +20,12 @@
   font-family: @base-font;
   .add-font-size-height-weight(24px, 400, 26px);
   color: @base-font-color;
+  margin-bottom: 34px;
+
+  @media (min-width: @medium-width) {
+    margin-bottom: 57px;
+    .add-font-size-height-weight(36px, 400, 36px);
+  }
 }
 
 .addition-list {
@@ -20,6 +36,7 @@
   @media (min-width: @medium-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-row-gap: 32px;
   }
 
   @media (min-width: @large-width) {
