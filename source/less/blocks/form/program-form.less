@@ -1,7 +1,11 @@
 @import "../../variables";
 
 .program-form {
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @medium-width) {
+    display: block;
     .add-base-left-right-padding(70px, 65px);
   }
 
@@ -15,11 +19,31 @@
 }
 
 .program-form__button {
+  box-sizing: border-box;
+  align-self: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 280px;
   .add-font-size-height-weight(16px, 400, 20px);
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(20px, 400, 20px);
+    margin-right: 61px;
+  }
+
+  @media (min-width: @large-width) {
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .program-form__required-text {
+  align-self: center;
   font-family: @alternate-font;
   .add-font-size-height-weight(14px, 400, 16px);
   color: @base-font-color;
+
+  @media (min-width: @medium-width) {
+    .add-font-size-height-weight(16px, 400, 16px);
+  }
 }
