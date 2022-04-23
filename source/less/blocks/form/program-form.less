@@ -1,11 +1,16 @@
 @import "../../variables";
 
 .program-form {
-  .add-base-left-right-padding;
+  @media (min-width: @medium-width) {
+    .add-base-left-right-padding(30px, 30px);
+  }
 
   @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 67px;
   }
 }
 

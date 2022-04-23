@@ -6,6 +6,14 @@
 
 .form__wrapper {
   .add-base-left-right-padding;
+
+  @media (min-width: @medium-width) {
+    .add-base-left-right-padding(71px, 65px);
+  }
+
+  @media (min-width: @large-width) {
+    .add-base-left-right-padding(110px, 110px);
+  }
 }
 
 .form__title {
